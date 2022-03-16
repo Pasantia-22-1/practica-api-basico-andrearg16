@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const router = require('./rutes/task.rout')
 
 class Serve {
     constructor(port) {
@@ -11,8 +12,8 @@ class Serve {
         this.api.listen(this.port, () => { console.log('Iniciando servicio'); });
     }
     initRoute() {
-        this.api.use('/home', (req, res) => {
-            res.json({ message: 'Hello World' })
+        this.api.use('/api/v1', (req, res) => {
+
         });
     }
 }
